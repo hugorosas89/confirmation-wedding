@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import './App.css';
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -32,9 +32,27 @@ const App = () => {
 		control,
 	} = useForm({ defaultValues });
 
-	const onSubmit = async (data) => {
+	const [showMessage, setShowMessage] = useState(null);
+
+	const onSubmit = (data) => {
 		reset();
-		const form = await axios.post('/api/form', { data });
+		emailjs
+			.send(
+				'default_service',
+				'template_f4ezpz8',
+				data,
+				'user_32QFsGYer0Y8UH835VGAE'
+			)
+			.then(
+				(result) => {
+					setShowMessage(true);
+					console.log('SUCCESS', result.status, result.text);
+				},
+				(error) => {
+					setShowMessage(false);
+					console.log('FAILED', error);
+				}
+			);
 	};
 
 	return (
@@ -151,6 +169,7 @@ const App = () => {
 								</Form.Group>
 							</Row>
 						</Form>
+						{showMessage ? <div>se envio bien</div> : ''}
 					</Col>
 				</Row>
 			</Container>

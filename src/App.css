@@ -6,11 +6,11 @@
 	src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
 		animation: App-logo-spin infinite 20s linear;
 	}
-}
+} */
 
 .App-header {
 	background-color: #fff;
@@ -23,14 +23,14 @@
 	color: white;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */
 span,
 p {
 	color: #000;
