@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/api/form', (req, res) => {
+app.post('/api/form', (req, res, next) => {
 	nodemailer.createTestAccount((err, account) => {
 		const htmlEmail = `
             <h3>Email enviado desde Confirmación page</h3>
