@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: 'Great Vibes', cursive;
+	font-family: 'Montserrat', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+	background-color: #fff;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+span,
+p {
+	color: #000;
+}
+.img {
+	align-items: center;
+	background: url('./assets/anillos.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	height: 750px;
+	width: 100%;
+	background-attachment: fixed;
+}
+.img h1 {
+	color: #fff;
+	font-family: 'Great Vibes', cursive;
+	font-size: 84px;
+}
+.img h4 {
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+}
+.count {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.count div {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.count div span {
+	background: #3e8a3e;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 8px 5px 8px;
+}
+.count div p {
+	margin-top: 10px;
+	font-size: 14px;
+}
+.btn-primary,
+.btn.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+	background-color: #ca9d42;
+	border-color: #ca9d42;
+}
+
+.form-check-input:valid:checked {
+	background-color: #ca9d42;
+	border-color: #ca9d42;
+}
+
+.was-validated .form-check-input:valid:checked {
+	background-color: #ca9d42 !important;
+	border-color: #ca9d42 !important;
+}
+
+.was-validated .form-check-input:valid {
+	border-color: #ca9d42 !important;
+}
+
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+	color: #000 !important;
+}
+
+.text-header p:first-child {
+	color: #ca9d42;
+	font-size: 28px;
+	font-weight: 800;
+	text-align: center;
+}
+.text-header p:last-child {
+	color: #ca9d42;
+	font-size: 21px;
+	font-weight: 800;
+	text-align: center;
+}
+.form-label,
+.form-check-label {
+	color: #000;
+}
+svg {
+	margin-left: 6px;
+}
+.invalid {
+	color: #dc3545;
+	font-size: 0.875em;
 }
