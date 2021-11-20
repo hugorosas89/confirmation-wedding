@@ -146,6 +146,10 @@ h3 {
 	margin-top: 10px;
 	font-size: 14px;
 }
+.form-label,
+.form-check-label {
+	color: #666 !important;
+}
 .btn-primary,
 .btn.btn-primary,
 .btn.btn-primary:hover,
@@ -153,25 +157,6 @@ h3 {
 .btn.btn-primary:active {
 	background-color: #ca9d42;
 	border-color: #ca9d42;
-}
-
-.form-check-input:valid:checked {
-	background-color: #ca9d42;
-	border-color: #ca9d42;
-}
-
-.was-validated .form-check-input:valid:checked {
-	background-color: #ca9d42 !important;
-	border-color: #ca9d42 !important;
-}
-
-.was-validated .form-check-input:valid {
-	border-color: #ca9d42 !important;
-}
-
-.form-check-input.is-valid ~ .form-check-label,
-.was-validated .form-check-input:valid ~ .form-check-label {
-	color: #000 !important;
 }
 
 .text-header h2 {
