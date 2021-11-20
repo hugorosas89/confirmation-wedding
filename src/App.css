@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&family=Raleway:wght@300&display=swap');
 
 @font-face {
 	font-family: 'Great Vibes', cursive;
 	font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
 }
 
@@ -31,9 +32,19 @@
 		transform: rotate(360deg);
 	}
 } */
-span,
+
 p {
-	color: #000;
+	color: #666;
+	font-family: 'Raleway', sans-serif;
+}
+span {
+	color: #666;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+h3 {
+	color: #666;
+	font-weight: 400;
 }
 .img {
 	align-items: center;
@@ -58,6 +69,62 @@ p {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
 }
+.img02-background {
+	background: url('./assets/img02.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 145px;
+	width: 100%;
+}
+.img03-background {
+	background: url('./assets/img06.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 100%;
+}
+.ceremony {
+	background: url('./assets/img03.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 8%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.reception {
+	background: url('./assets/img04.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 10%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.dresscode {
+	background: url('./assets/img05.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 10%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.gift {
+	background: url('./assets/img14.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60px;
+	width: 10%;
+	margin-right: auto;
+	margin-left: auto;
+}
 .count {
 	align-items: center;
 	display: flex;
@@ -69,7 +136,7 @@ p {
 	flex-direction: column;
 }
 .count div span {
-	background: #3e8a3e;
+	background: #ca9d42;
 	border-radius: 20px;
 	color: #fff;
 	font-size: 20px;
@@ -107,18 +174,16 @@ p {
 	color: #000 !important;
 }
 
-.text-header p:first-child {
-	color: #ca9d42;
-	font-size: 28px;
-	font-weight: 800;
+.text-header h2 {
+	color: #666;
+	font-family: 'Great Vibes', cursive;
+	font-size: 46px;
 	text-align: center;
 }
-.text-header p:last-child {
-	color: #ca9d42;
-	font-size: 21px;
-	font-weight: 800;
+.text-header {
 	text-align: center;
 }
+
 .form-label,
 .form-check-label {
 	color: #000;
@@ -129,4 +194,94 @@ svg {
 .invalid {
 	color: #dc3545;
 	font-size: 0.875em;
+}
+.invited {
+	text-align: center;
+}
+.invited h2 {
+	color: #666;
+	font-family: 'Great Vibes', cursive;
+	font-size: 65px;
+	line-height: 60px;
+}
+.invited p {
+	padding: 0 30px;
+}
+.text-ceremony,
+.text-reception,
+.text-dresscode,
+.text-us,
+.text-gift {
+	text-align: center;
+	color: #666;
+}
+.pr-0 {
+	border-right: 2px solid #ca9d42;
+}
+.pm {
+	font-weight: 100;
+	font-size: 22px;
+}
+.place-address {
+	padding: 0 20px;
+}
+.title-ceremony,
+.title-celebration,
+.title-dresscode,
+.title-us,
+.title-gift {
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+.ubication-btn {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.ubication-btn a {
+	text-decoration: none;
+	color: #fff;
+	background: #ca9d42;
+	padding: 7px 10px;
+	border-radius: 5px;
+}
+.ubication-btn a:hover {
+	color: #fff;
+}
+
+.text-us img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.text-gift p {
+	padding: 0 30px;
+}
+
+.btn-gift .accordion-button {
+	align-items: center;
+	background: #ca9d42;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+.btn-gift .accordion-button::after {
+	display: none;
+}
+.btn-gift .accordion-button:not(.collapsed) {
+	color: #fff;
+	background: #ca9d42;
+}
+.btn-gift .accordion-button:focus {
+	border-color: #ca9d42;
+	box-shadow: none;
+}
+.accordion-item {
+	border: none !important;
+}
+
+@media (min-width: 768px) {
+	.img03-background {
+		display: none;
+	}
 }
