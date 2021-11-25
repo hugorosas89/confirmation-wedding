@@ -196,7 +196,8 @@ const App = () => {
 									<Accordion.Body>
 										<p>Banco BBVA</p>
 										Cuenta: xxx xxx xxx xxx xxx<br></br>
-										Concepto: Donativo Boda
+										Concepto: Regalo de Bodas
+										<p>¡Muchas Gracias!</p>
 									</Accordion.Body>
 								</Accordion.Item>
 							</Accordion>
