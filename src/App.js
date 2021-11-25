@@ -90,7 +90,10 @@ const App = () => {
 		<Fragment>
 			<Container fluid>
 				<Row>
-					<div className="py-5 img">
+					<div
+						className="py-5 img"
+						role="img"
+						alt="Si no se visualiza la imagen, abrir en Chrome">
 						<h1>Nos casamos</h1>
 						<h4>HUGO & YULI</h4>
 					</div>

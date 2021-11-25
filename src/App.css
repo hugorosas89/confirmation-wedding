@@ -63,6 +63,9 @@ h3 {
 	-webkit-flex-direction: column;
 	background-attachment: fixed;
 }
+.img:before {
+	content: attr(alt);
+}
 .img h1 {
 	color: #fff;
 	font-family: 'Great Vibes', cursive;
