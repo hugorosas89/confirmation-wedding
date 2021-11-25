@@ -197,7 +197,7 @@ const App = () => {
 										<p>Banco BBVA</p>
 										Cuenta: xxx xxx xxx xxx xxx<br></br>
 										Concepto: Regalo de Bodas
-										<p>¡Muchas Gracias!</p>
+										<p className="mt-4">¡Muchas Gracias!</p>
 									</Accordion.Body>
 								</Accordion.Item>
 							</Accordion>
