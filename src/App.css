@@ -49,14 +49,16 @@ h3 {
 .img {
 	align-items: center;
 	background: url('./assets/Yuli&Hugo.jpg');
+	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	display: flex;
-	justify-content: end;
-	flex-direction: column;
 	height: 750px;
 	width: 100%;
+	justify-content: end;
+	flex-direction: column;
+	background-attachment: fixed;
 }
 .img h1 {
 	color: #fff;
