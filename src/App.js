@@ -93,7 +93,8 @@ const App = () => {
 					<div
 						className="py-5 img"
 						role="img"
-						alt="Si no se visualiza la imagen, abrir en Chrome">
+						alt="Si no se visualiza la imagen, abrir en Chrome"
+						aria-label="Si no se visualiza la imagen, abrir en Chrome">
 						<h1>Nos casamos</h1>
 						<h4>HUGO & YULI</h4>
 					</div>
