@@ -193,7 +193,11 @@ const App = () => {
 							<Accordion>
 								<Accordion.Item eventKey="0">
 									<Accordion.Header>VER CUENTA BANCARIA</Accordion.Header>
-									<Accordion.Body>Banco BBVA</Accordion.Body>
+									<Accordion.Body>
+										<p>Banco BBVA</p>
+										Cuenta: xxx xxx xxx xxx xxx<br></br>
+										Concepto: Donativo Boda
+									</Accordion.Body>
 								</Accordion.Item>
 							</Accordion>
 						</Col>
