@@ -48,8 +48,7 @@ h3 {
 }
 .img {
 	align-items: center;
-	background: url('./assets/Yuli&Hugo.jpg');
-	background-size: cover;
+	background: url('./assets/Yuli&Hugo.jpg') 0 0 / cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	display: flex;
