@@ -274,3 +274,8 @@ svg {
 		display: none;
 	}
 }
+@media (min-width: 1024px) {
+	.img {
+		height: 900px;
+	}
+}
