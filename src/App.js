@@ -1,7 +1,17 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import './App.css';
 import emailjs from 'emailjs-com';
+import { FaRegSmileWink, FaRegTired } from 'react-icons/fa';
+import { RadioGroup, FormControlLabel, Radio } from '@material-ui/core';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, {
+	EffectCube,
+	Navigation,
+	Pagination,
+	Autoplay,
+} from 'swiper';
+import { IconContext } from 'react-icons';
+
 import image07 from './assets/img07.jpg';
 import image08 from './assets/img08.jpg';
 import image11 from './assets/img11.jpg';
@@ -13,11 +23,11 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { FaRegSmileWink, FaRegTired } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
-import { RadioGroup, FormControlLabel, Radio } from '@material-ui/core';
 import Count from './components/Count';
 import swal from 'sweetalert';
+import './App.css';
+
+SwiperCore.use([EffectCube, Pagination, Navigation, Autoplay]);
 
 const defaultValues = {
 	firstName: '',
@@ -169,17 +179,38 @@ const App = () => {
 					<Col lg={12} md={12} xs={12} className="text-us">
 						<div className="my-3 mb-4 title-us">NOSOTROS</div>
 						<Row className="justify-content-xs-center mb-3">
-							<Col md={3} xs={6} className="mb-3">
-								<img src={image07} alt="us" />
-							</Col>
-							<Col md={3} xs={6} className="mb-3">
-								<img src={image08} alt="us" />
-							</Col>
-							<Col md={3} xs={6} className="mb-3">
-								<img src={image11} alt="us" />
-							</Col>
-							<Col md={3} xs={6} className="mb-3">
-								<img src={image12} alt="us" />
+							<Col md={12} xs={12} className="mb-3">
+								<Swiper
+									effect={'cube'}
+									grabCursor={true}
+									cubeEffect={{
+										shadow: true,
+										slideShadows: true,
+										shadowOffset: 20,
+										shadowScale: 0.94,
+										loop: true,
+									}}
+									autoplay={{
+										delay: 2500,
+										disableOnInteraction: false,
+									}}
+									pagination={{
+										clickable: true,
+									}}
+									className="mySwiper">
+									<SwiperSlide>
+										<img src={image07} alt="us" />
+									</SwiperSlide>
+									<SwiperSlide>
+										<img src={image08} alt="us" />
+									</SwiperSlide>
+									<SwiperSlide>
+										<img src={image11} alt="us" />
+									</SwiperSlide>
+									<SwiperSlide>
+										<img src={image12} alt="us" />
+									</SwiperSlide>
+								</Swiper>
 							</Col>
 						</Row>
 					</Col>
