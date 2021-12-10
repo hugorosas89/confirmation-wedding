@@ -186,6 +186,7 @@ h3 {
 .btn.btn-primary:active {
 	background-color: #ca9d42;
 	border-color: #ca9d42;
+	width: 100%;
 }
 
 .text-header h2 {
@@ -257,10 +258,6 @@ svg {
 	color: #fff;
 }
 
-.text-gift p {
-	padding: 0 30px;
-}
-
 .btn-gift .accordion-button {
 	align-items: center;
 	background: #ca9d42;
@@ -318,9 +315,7 @@ svg {
 	.img03-background {
 		display: none;
 	}
-}
-@media (min-width: 1024px) {
-	.img {
-		height: 900px;
+	.text-gift p {
+		padding: 0 30px;
 	}
 }

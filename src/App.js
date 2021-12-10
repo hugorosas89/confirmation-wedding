@@ -252,7 +252,7 @@ const App = () => {
 						</Col>
 						<p>
 							Si deseas hacernos tu regalo en efectivo, el dia del evento
-							entregaremos un sobre para que puedas hacernoslo llegar{' '}
+							entregaremos un sobre para que puedas hacernoslo llegar.
 						</p>
 					</Col>
 				</Row>
@@ -286,23 +286,8 @@ const App = () => {
 									)}
 								</Form.Group>
 							</Row>
-							{/* <Row className="mb-3 justify-content-md-center">
-								<Form.Group as={Col} md="8">
-									<Form.Label>Apellidos:</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Ingrese aquí sus apellidos"
-										name="lastname"
-										className="form-control mb-2"
-										{...register('lastName', { required: true })}
-									/>
-									{errors.lastName?.type === 'required' && (
-										<ShowErrors message="El apellido es requerido" />
-									)}
-								</Form.Group>
-							</Row> */}
 							<Row className="mb-3 justify-content-md-center">
-								<Col lg={8} xs={12}>
+								<Col lg={8} md={8} xs={12}>
 									<p>
 										En caso de confirmar a nombre de tu familia, ingresa el
 										número de personas por las que confirmas.
@@ -379,7 +364,7 @@ const App = () => {
 								</Form.Group>
 							</Row>
 							<Row className="mb-3 justify-content-md-center">
-								<Form.Group as={Col} md="8">
+								<Form.Group as={Col} md="4">
 									<Button type="submit">CONFIRMAR</Button>
 								</Form.Group>
 							</Row>
