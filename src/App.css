@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Great+Vibes&family=Montserrat:wght@700&family=Raleway:wght@300&display=swap');
 
 @font-face {
 	font-family: 'Great Vibes', cursive;
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'Raleway', sans-serif;
-	src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&display=swap');
+	font-family: 'Corinthia', cursive;
+	src: url('https://fonts.googleapis.com/css2?family=Corinthia&family=Great+Vibes&family=Montserrat:wght@700&display=swap');
 }
 
 .App-header {
@@ -31,34 +32,72 @@ h3 {
 	color: #666;
 	font-weight: 400;
 }
-.img {
-	-webkit-align-items: center;
-	align-items: center;
-	background: url('./assets/Yuli&Hugo.jpg');
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	display: -webkit-flex;
-	height: 750px;
-	width: 100%;
-	justify-content: flex-end;
-	-webkit-justify-content: flex-end;
-	flex-direction: column;
-	-webkit-flex-direction: column;
-	background-attachment: fixed;
+
+.main-container-img {
+	padding: 0 !important;
+	position: relative;
 }
 
-.img h1 {
+.main-container-img img {
+	width: 100%;
+}
+
+.div-content-img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5%;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.div-content-img h1 {
 	color: #fff;
 	font-family: 'Great Vibes', cursive;
 	font-size: 78px;
 }
-.img h4 {
+
+.div-content-img h4 {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
 }
+
+.invited {
+	position: relative;
+	text-align: center;
+}
+.invited h2 {
+	color: #666;
+	font-family: 'Great Vibes', cursive;
+	font-size: 65px;
+	line-height: 60px;
+	animation: bounce2 0.5s alternate infinite ease-in;
+}
+.invited p {
+	padding: 0 30px;
+}
+
+@-webkit-keyframes bounce2 {
+	0% {
+		transform: translateY(-10%);
+	}
+
+	100% {
+		opacity: translateY(0%);
+	}
+}
+@keyframes bounce2 {
+	0% {
+		transform: translateY(-10%);
+	}
+
+	100% {
+		opacity: translateY(0%);
+	}
+}
+
 .img02-background {
 	background: url('./assets/img02.png');
 	background-size: contain;
@@ -155,6 +194,11 @@ h3 {
 	font-size: 46px;
 	text-align: center;
 }
+.text-header h4 {
+	color: #666;
+	font-family: 'Corinthia', cursive;
+	font-size: 30px;
+}
 .text-header {
 	text-align: center;
 }
@@ -170,18 +214,7 @@ svg {
 	color: #dc3545;
 	font-size: 0.875em;
 }
-.invited {
-	text-align: center;
-}
-.invited h2 {
-	color: #666;
-	font-family: 'Great Vibes', cursive;
-	font-size: 65px;
-	line-height: 60px;
-}
-.invited p {
-	padding: 0 30px;
-}
+
 .text-ceremony,
 .text-reception,
 .text-dresscode,

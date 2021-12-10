@@ -12,8 +12,11 @@ import SwiperCore, {
 } from 'swiper';
 import { IconContext } from 'react-icons';
 
+import mainImage from './assets/Yuli-Hugo.jpg';
 import image07 from './assets/img07.jpg';
 import image08 from './assets/img08.jpg';
+import image09 from './assets/img09.jpg';
+import image10 from './assets/img10.jpg';
 import image11 from './assets/img11.jpg';
 import image12 from './assets/img12.jpg';
 
@@ -31,7 +34,7 @@ SwiperCore.use([EffectCube, Pagination, Navigation, Autoplay]);
 
 const defaultValues = {
 	firstName: '',
-	lastName: '',
+	numPerson: '',
 	attendance: '',
 };
 
@@ -52,12 +55,12 @@ const App = () => {
 		const { attendance } = data;
 		let isGoing = '';
 		if (attendance === 'si') {
-			isGoing = 'Gracias por asistir';
+			isGoing = 'Gracias por acompañarnos y ser parte de esta nueva etapa';
 		} else {
-			isGoing = 'Es una pena que no puedas acompañarnos';
+			isGoing = 'Es una pena que no puedas acompañarnos, nos harás falta';
 		}
 		swal({
-			title: 'Recibiremos tus datos',
+			title: 'Recibimos tus datos',
 			text: isGoing,
 			icon: 'success',
 			button: 'Aceptar',
@@ -100,18 +103,21 @@ const App = () => {
 		<Fragment>
 			<Container fluid>
 				<Row>
-					<div
-						className="py-5 img"
-						role="img"
-						alt="Si no se visualiza la imagen, abrir en Chrome"
-						aria-label="Si no se visualiza la imagen, abrir en Chrome">
-						<h1>Nos casamos</h1>
-						<h4>HUGO & YULI</h4>
+					<div className="main-container-img">
+						<img
+							src={mainImage}
+							alt="Si no se visualiza la imagen, abrir en navegador Chrome"
+						/>
+						<div className="div-content-img">
+							<h1>Nos casamos</h1>
+							<h4>HUGO & YULI</h4>
+						</div>
 					</div>
 				</Row>
 				<Row className="mt-4">
 					<Col lg={6} md={6} xs={12} className="invited">
 						<h2>Estás invitado!</h2>
+						{/* <h2>Estás invitado!</h2> */}
 						<p>Queremos que seas parte de este momento tan especial</p>
 					</Col>
 					<Col lg={6} md={6} xs={12}>
@@ -205,6 +211,12 @@ const App = () => {
 										<img src={image08} alt="us" />
 									</SwiperSlide>
 									<SwiperSlide>
+										<img src={image09} alt="us" />
+									</SwiperSlide>
+									<SwiperSlide>
+										<img src={image10} alt="us" />
+									</SwiperSlide>
+									<SwiperSlide>
 										<img src={image11} alt="us" />
 									</SwiperSlide>
 									<SwiperSlide>
@@ -220,16 +232,17 @@ const App = () => {
 						<div className="gift"></div>
 						<div className="my-1 title-gift">REGALOS</div>
 						<p className="my-1 mb-4">
-							Sin ti esto no sería igual. El regalo es opcional, la asistencia
-							obligatoria. Pero si algo nos quieres regalar, en efectivo lo
-							sabremos apreciar
+							Sin ti esto no sería igual. Gracias por acompañarnos en el inicio
+							de esta nueva etapa en nuestras vidas. El regalo es opcional, la
+							asistencia obligatoria. Pero si quieres tener un detalle con
+							nosotros, suma kilometros a nuestro viaje.
 						</p>
 						<Col lg={12} md={12} xs={12} className="btn-gift mb-3">
 							<Accordion>
 								<Accordion.Item eventKey="0">
 									<Accordion.Header>VER CUENTA BANCARIA</Accordion.Header>
 									<Accordion.Body>
-										<p>Banco BBVA</p>
+										Banco: BBVA<br></br>
 										Cuenta: xxx xxx xxx xxx xxx<br></br>
 										Concepto: Regalo de Bodas
 										<p className="mt-4">¡Muchas Gracias!</p>
@@ -248,9 +261,11 @@ const App = () => {
 					<Col lg={6} xs={12} className="text-header">
 						<h2>
 							Nos encantaría que formes parte del día más importante de nuestras
-							vidas
+							vidas.
 						</h2>
-						<span>Apóyanos confirmando tu asistencia</span>
+						<span>
+							Apóyanos confirmando tu asistencia, es de suma importancia
+						</span>
 					</Col>
 				</Row>
 				<Row className="justify-content-md-center mt-5">
@@ -258,7 +273,7 @@ const App = () => {
 						<Form onSubmit={handleSubmit(onSubmit)}>
 							<Row className="mb-3 justify-content-md-center">
 								<Form.Group as={Col} md="8">
-									<Form.Label>Nombre(s)</Form.Label>
+									<Form.Label>Nombre y apellidos:</Form.Label>
 									<Form.Control
 										type="text"
 										placeholder="Ingrese aquí su nombre"
@@ -271,9 +286,9 @@ const App = () => {
 									)}
 								</Form.Group>
 							</Row>
-							<Row className="mb-3 justify-content-md-center">
+							{/* <Row className="mb-3 justify-content-md-center">
 								<Form.Group as={Col} md="8">
-									<Form.Label>Apellidos</Form.Label>
+									<Form.Label>Apellidos:</Form.Label>
 									<Form.Control
 										type="text"
 										placeholder="Ingrese aquí sus apellidos"
@@ -283,6 +298,29 @@ const App = () => {
 									/>
 									{errors.lastName?.type === 'required' && (
 										<ShowErrors message="El apellido es requerido" />
+									)}
+								</Form.Group>
+							</Row> */}
+							<Row className="mb-3 justify-content-md-center">
+								<Col lg={8} xs={12}>
+									<p>
+										En caso de confirmar a nombre de tu familia, ingresa el
+										número de personas por las que confirmas.
+									</p>
+								</Col>
+								<Form.Group as={Col} md="8">
+									<Form.Label>Número de personas:</Form.Label>
+									<Form.Control
+										type="number"
+										name="numperson"
+										placeholder="Escribe el número de personas aquí"
+										min="0"
+										max="5"
+										className="form-control mb-2"
+										{...register('numPerson', { required: true })}
+									/>
+									{errors.numPerson?.type === 'required' && (
+										<ShowErrors message="El número es requerido" />
 									)}
 								</Form.Group>
 							</Row>
@@ -346,6 +384,12 @@ const App = () => {
 								</Form.Group>
 							</Row>
 						</Form>
+					</Col>
+				</Row>
+				<Row className="justify-content-md-center mt-4">
+					<Col lg={6} xs={12} className="text-header">
+						<h2>Te esperamos</h2>
+						<h4>Hugo y Yuli</h4>
 					</Col>
 				</Row>
 			</Container>
