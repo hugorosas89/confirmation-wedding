@@ -186,7 +186,11 @@ h3 {
 .btn.btn-primary:active {
 	background-color: #ca9d42;
 	border-color: #ca9d42;
-	width: 100%;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	width: 65%;
 }
 
 .text-header h2 {
@@ -275,6 +279,9 @@ svg {
 .btn-gift .accordion-button:focus {
 	border-color: #ca9d42;
 	box-shadow: none;
+}
+.btn-gift p {
+	margin-bottom: 5px;
 }
 .accordion-item {
 	border: none !important;

@@ -242,9 +242,21 @@ const App = () => {
 								<Accordion.Item eventKey="0">
 									<Accordion.Header>VER CUENTA BANCARIA</Accordion.Header>
 									<Accordion.Body>
-										Banco: BBVA<br></br>
-										Cuenta: xxx xxx xxx xxx xxx<br></br>
-										Concepto: Regalo de Bodas
+										<p>
+											<span>Banco: </span>BBVA
+										</p>
+										<p>
+											<span>Cuenta: </span>158 077 0854
+										</p>
+										<p>
+											<span>Tarjeta: </span>4152 3136 3775 2143
+										</p>
+										<p>
+											<span>Nombre: </span>Yuliana Casillas
+										</p>
+										<p>
+											<span>Concepto: </span>Regalo de Bodas
+										</p>
 										<p className="mt-4">¡Muchas Gracias!</p>
 									</Accordion.Body>
 								</Accordion.Item>
