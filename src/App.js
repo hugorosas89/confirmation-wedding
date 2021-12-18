@@ -232,10 +232,10 @@ const App = () => {
 						<div className="gift"></div>
 						<div className="my-1 title-gift">REGALOS</div>
 						<p className="my-1 mb-4">
-							Sin ti esto no sería igual. Gracias por acompañarnos en el inicio
-							de esta nueva etapa en nuestras vidas. El regalo es opcional, la
-							asistencia obligatoria. Pero si quieres tener un detalle con
-							nosotros, suma kilometros a nuestro viaje.
+							Sin ti esto no sería igual. <br></br>Gracias por acompañarnos en
+							el inicio de esta nueva etapa en nuestras vidas. El regalo es
+							opcional, la asistencia obligatoria. Pero si quieres tener un
+							detalle con nosotros, suma kilometros a nuestro viaje.
 						</p>
 						<Col lg={12} md={12} xs={12} className="btn-gift mb-3">
 							<Accordion>
@@ -263,8 +263,8 @@ const App = () => {
 							</Accordion>
 						</Col>
 						<p>
-							Si deseas hacernos tu regalo en efectivo, el dia del evento
-							entregaremos un sobre para que puedas hacernoslo llegar.
+							En el salón encontrarás sobres y una urna por si prefieres
+							hacernos un presente en efectivo.
 						</p>
 					</Col>
 				</Row>
