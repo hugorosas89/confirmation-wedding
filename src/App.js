@@ -170,7 +170,10 @@ const App = () => {
 					<Col lg={6} md={6} xs={12} className="text-dresscode my-3">
 						<div className="dresscode"></div>
 						<div className="my-1 title-dresscode">CÓDIGO DE VESTIMENTA</div>
-						<span>Formal | En medida de lo posible: NO NIÑOS</span>
+						<span>
+							Formal<br></br> No verde, No blanco<br></br> En medida de lo
+							posible: NO NIÑOS
+						</span>
 					</Col>
 					<Col lg={6} md={6} xs={12} className="ubication-btn mt-3">
 						<a
