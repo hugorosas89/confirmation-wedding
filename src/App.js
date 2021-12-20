@@ -55,9 +55,9 @@ const App = () => {
 		const { attendance } = data;
 		let isGoing = '';
 		if (attendance === 'si') {
-			isGoing = 'Gracias por acompañarnos y ser parte de esta nueva etapa';
+			isGoing = 'Gracias por acompañarnos y ser parte de esta nueva etapa.';
 		} else {
-			isGoing = 'Es una pena que no puedas acompañarnos, nos harás falta';
+			isGoing = 'Es una pena que no puedas acompañarnos, nos harás falta.';
 		}
 		swal({
 			title: 'Recibimos tus datos',
